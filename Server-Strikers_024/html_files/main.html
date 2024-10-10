@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Focus Session</title>
+  <link rel="stylesheet" href="/styles/design.css">
+  <link rel="stylesheet" href="/styles/music.css">
+</head>
+
+<body>
+  <div class="maincontainer">
+    <div class="container">
+      <div class="focus-session">
+        <button id="theme-toggle">Switch to Light Theme</button>
+        <!-- Moved theme toggle here -->
+
+        <h2 id="get-redy">Get ready to focus</h2>
+        <p>
+          We'll turn off notifications and app alerts during each session. For
+          longer sessions, we'll add a short break so you can recharge.
+        </p>
+        <div class="time-setting">
+          <div class="num-border">
+            <div class="custom-number-input" style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              ">
+              <!-- <label for="time-input">Time (mins):</label> -->
+              <input type="number" id="time-input" value="10" min="1" />
+              <div class="arrow-buttons">
+                <button type="button" class="arrow-up" onclick="changeValue(1)">
+                  &#9650;
+                </button>
+                <button type="button" class="arrow-down" onclick="changeValue(-1)">
+                  &#9660;
+                </button>
+              </div>
+            </div>
+          </div>
+          <p style="text-align: center">Time (mins)</p>
+        </div>
+        <div class="break-setting">
+          <input type="checkbox" id="skip-breaks" />
+          <label for="skip-breaks">Skip breaks</label>
+        </div>
+        <button  id="start-button">Start focus session</button>
+        <!-- <div class="timer">
+                        
+                      <div class="flip-clock-wrapper" style="background-color: red;">
+                        <div id="minutes" class="flip-clock__piece">00</div>
+                        <span>:</span>
+                        <div id="seconds" class="flip-clock__piece">00</div>
+                      </div>
+                      <p id="timer-status">Focus Session</p>
+                    </div> -->
+
+        <div class="timer" id="timer">
+          <svg class="timer-border" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="80" class="timer-border-bg"></circle>
+            <circle cx="100" cy="100" r="80" class="timer-border-progress"></circle>
+          </svg>
+
+          <div class="flip-clock-wrapper">
+            <div id="minutes" class="flip-clock__piece">00</div>
+            <span>:</span>
+            <div id="seconds" class="flip-clock__piece">00</div>
+          </div>
+          <p id="timer-status">Focus Session</p>
+          <div class="timer-controls">
+            <button id="pause-button" class="control-button"><i class="fa-solid fa-play fa-xs"></i></button>
+            <div class="back-container">
+              <button id="back-button" >Reset</i></button>
+
+              <span class="tooltip">Back to reset timer</span>
+            </div>
+            <button id="resume-button" class="control-button"><i class="fa-solid fa-pause"></i></button>
+          </div>
+        </div>
+      </div>
+      <!-- goals -->
+      <div  class="goal-music">
+        <div class="daily-progress">
+          <h2>
+            Daily progress
+            <span class="edit-icon" id="edit-goal">&#9998;</span>
+          </h2>
+          <div class="progress-circle">
+            <svg>
+              <circle cx="50" cy="50" r="45"></circle>
+              <circle cx="50" cy="50" r="45" id="progress-circle"></circle>
+            </svg>
+            <div class="progress-text">
+              <p><span id="completed-minutes">0</span> minutes</p>
+            </div>
+          </div>
+          <div id="progress-data">
+            <p>Daily goal: <span id="daily-goal"> <br>0 min</span></p>
+            <p>Completed: <span id="completed-time"><br>0 minutes</span></p>
+            <p>Streak: <span id="streak-days"><br>0 days</span></p>
+          </div>
+        </div>
+
+
+
+
+        <div id="edit-modal" class="modal">
+          <div class="modal-content">
+            <h2>Edit Your Goal</h2>
+            <div class="goal-setting">
+              <label for="goal-input">Daily Goal (mins):</label>
+              <input type="number" id="goal-input" min="1" />
+            </div>
+            <div class="modal-buttons">
+              <button id="save-button">Save</button>
+              <button id="cancel-button">Cancel</button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="player">
+            <img alt="Album Cover" id="albumCover">
+            <div class="track-info">
+              <h3 id="trackTitle">Track Title</h3>
+              <p id="trackArtist">Artist Name</p>
+            </div>
+            <div class="progress-bar">
+              <div class="progress" id="progress"></div>
+            </div>
+            <div class="controls">
+              <button id="prev"><span><i class="fa-solid fa-backward"></i></span></i></button>
+              <button id="playPause"><i class="fa-solid fa-play fa-xs"></i></button>
+              <button id="next"><i class="fa-solid fa-forward"></i></button>
+            </div>
+          </div>
+
+          <audio id="audio"></audio>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+</body>
+
+</html>
+<script src="/scripts/script.js"></script>
+<script src="/scripts/music.js">
+
+</script>
+<script src="https://kit.fontawesome.com/1097cbaf73.js" crossorigin="anonymous"></script>

@@ -1,0 +1,1263 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+/* Scroll Behavior */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.card-container {
+    will-change: transform;
+    transition: transform 0.4s ease-out;
+}
+
+.card {
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    will-change: transform, filter;
+}
+
+#circle::after,
+#circle::before {
+    will-change: transform;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimonials-section {
+    scrollbar-width: thin;
+    scrollbar-color: #333 #e0e0e0;
+}
+
+.testimonials-section::-webkit-scrollbar {
+    display: none;
+}
+
+.feature {
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.about-grid-item {
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+    will-change: transform, opacity;
+}
+
+.about-grid-item img {
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.about-grid-item:hover img {
+    transform: scale(1.1);
+}
+
+#preview {
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    will-change: transform;
+}
+
+.button-gradient {
+    transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* Scroll Behavior End*/
+
+body {
+    margin: auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+
+/* Navbar Styles*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 20px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 111111;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .logo img {
+    height: 30px;
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #f4f4f4;
+}
+
+/* Navbar Styles End*/
+
+
+/* Hero Section Style*/
+.hero {
+    position: relative;
+    height: 110vh;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+    background-color: black;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+
+.hero-text {
+    position: relative;
+    color: #fff;
+    gap: 30px;
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 100px 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.card {
+    margin: 15px;
+}
+
+.hero-text h1 {
+    font-size: 1em;
+    margin-left: 40px;
+    animation: slideUp 1s ease-out;
+}
+
+.hero-text p {
+    font-size: 12.2em;
+    text-transform: uppercase;
+    letter-spacing: -15px;
+    word-spacing: -50px;
+    font-family: "Roboto Mono", monospace;
+}
+
+
+.hero-text .cta-button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    margin: auto;
+}
+
+.cta-button {
+    background-color: #555;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Hero Section Style End*/
+
+/* Creativity Section Style*/
+
+#benefits {
+    background-color: #f4f4f4;
+}
+
+#circle {
+    height: 250vh;
+    position: relative;
+    left: -300px;
+    width: 150%;
+    border-radius: 100%;
+    overflow: hidden;
+    display: flex;
+    padding-top: 80px;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(205, 225, 232);
+}
+
+#circle .aim {
+    font-size: 6.2em;
+    letter-spacing: -10px;
+    word-spacing: -30px;
+    font-family: 'Roboto Mono', monospace;
+    color: black;
+    z-index: 11111;
+    margin-left: -800px;
+    margin-top: 100px;
+}
+
+.line {
+    width: 58%;
+    margin: 0px auto;
+    background-color: black;
+    height: 1px;
+    z-index: 1111;
+}
+
+#circle .quality {
+    font-size: 6.2em;
+    letter-spacing: -10px;
+    word-spacing: -30px;
+    font-family: 'Roboto Mono', monospace;
+    color: black;
+    z-index: 1111;
+    margin-left: 550px;
+}
+
+.theory {
+    font-size: 2rem;
+    letter-spacing: 0px;
+    word-spacing: -4px;
+    text-indent: 200px;
+    width: 60%;
+    z-index: 111;
+    margin-top: 50px;
+
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* General card styles */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 400px;
+}
+
+/* Each card style */
+.card {
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    border: 2px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* GIF Style */
+.card-gif {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Transform effects for each card */
+.left-card {
+    transform: rotate(-10deg) translateX(-250px) translateY(30px);
+    z-index: 1;
+
+}
+
+.center-card {
+    transform: rotate(0deg) translateY(-20px);
+    z-index: 2;
+}
+
+.right-card {
+    transform: rotate(10deg) translateX(250px) translateY(30px);
+    z-index: 0;
+}
+
+/* Center card hover effect */
+.active {
+    transform: scale(1.05);
+}
+
+
+/* Hover to play GIF */
+.card:not(.active) .card-gif {
+    filter: grayscale(100%);
+}
+
+.card:hover .card-gif {
+    filter: none;
+}
+
+
+
+/* Circle after */
+#circle::after {
+    content: '';
+    height: 700px;
+    width: 40%;
+    border-radius: 50%;
+    background-color: #bfcdd7;
+    position: absolute;
+    top: -100px;
+    overflow: hidden;
+    animation: shake 3s infinite ease-in-out;
+    transform-origin: 50% 50%;
+}
+
+/* Circle before */
+#circle::before {
+    content: '';
+    height: 460px;
+    width: 25%;
+    border-radius: 50%;
+    background-color: #e49366;
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    overflow: hidden;
+    animation: shake 3s infinite ease-in-out;
+    transform-origin: 50% 50%;
+}
+
+/* Keyframes for shaking effect */
+@keyframes shake {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(5px, -5px);
+    }
+
+    50% {
+        transform: translate(0, 5px);
+    }
+
+    75% {
+        transform: translate(-5px, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Add scroll event to trigger the animation */
+
+
+
+/* Features Section Style*/
+.features-section {
+    background-color: white;
+    box-shadow: 2px 4px 6px black;
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+    z-index: 1111;
+}
+
+.features-section h2 {
+    margin-bottom: 20px;
+    animation: slideUp 1s ease-out;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.feature {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    flex: 1 1 30%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+}
+
+.feature:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Features Section Style End*/
+
+
+
+
+/* Testimonials Section Style*/
+.testimonials-section {
+    background: linear-gradient(transparent, black);
+    padding: 60px 20px;
+    text-align: center;
+    max-height: 600px;
+    overflow-y: auto;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+    scrollbar-width: thin;
+    scrollbar-color: #333 #e0e0e0;
+}
+
+.testimonials-section::-webkit-scrollbar {
+    width: 0px;
+    display: none;
+}
+
+.testimonials-section::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 10px;
+}
+
+.testimonials-section::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.testimonials-section::-webkit-scrollbar-thumb:hover {
+    background: #444;
+}
+
+.testimonials-section h2 {
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+    width: 50%;
+    margin: auto;
+}
+
+.testimonial {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonials Section Style End*/
+
+/* Scroll Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Classes added by JavaScript for the scroll animation */
+.testimonial.slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.testimonial.slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+
+/* Call to Action Section Styles*/
+.cta-section {
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    background: linear-gradient(black, transparent);
+}
+
+.button-gradient {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-gradient:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+/* Call to Action Section Style End*/
+
+
+
+
+/* Pomodore Preview Section Style*/
+#preview {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: row;
+    padding: 60px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#preview div {
+    width: 100%;
+}
+
+#preview h1 {
+    font-size: 1em;
+    color: #257995;
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+/* About Section with Image Grid and Scroll Animation */
+.about-section {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+    width: 90%;
+}
+
+.about-grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.about-grid-item.in-view {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.about-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.about-grid-item:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-grid-item .overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.about-grid-item:hover .overlay-text {
+    opacity: 1;
+}
+
+
+@keyframes imageFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.about-grid img {
+    animation: imageFadeIn 1s ease-in-out;
+}
+
+
+/* Custom Scrollbar Style*/
+::-webkit-scrollbar {
+    width: none;
+    height: 12px;
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #333;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #444;
+}
+
+/* Custom Scrollbar Style End*/
+
+
+
+/* Animations Keyframes*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+/* About Section Style*/
+#aboutSection {
+    background-color: #f4f4f4;
+    height: auto;
+    padding: 50px 70px;
+}
+
+#aboutSection h1 {
+    font-size: 4em;
+    text-align: center;
+    letter-spacing: -2px;
+    font-weight: 700;
+}
+
+.cardsDiv {
+    position: relative;
+    perspective: 1000px;
+    box-sizing: border-box;
+    height: 200vh;
+}
+
+.developer {
+    height: 400px;
+    width: 300px;
+    border-radius: 10px;
+    background: linear-gradient(#257995, black);
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    position: absolute;
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.developer .card-back {
+    transform: rotateY(180deg);
+}
+
+.card-back img {
+    border-radius: 10px;
+    filter: grayscale(100%);
+    transition: filter 0.3s, mask-position 1s ease-out;
+}
+
+.card-back img:hover {
+    filter: grayscale(0%);
+}
+
+.developer.flipped {
+    transform: rotateY(180deg);
+}
+
+.developer .card-front h3 {
+    color: #f4f4f4;
+    font-size: 1.8rem;
+}
+
+.developerName-1 {
+    left: 60px;
+    top: 100px;
+}
+
+.developerName-2 {
+    right: 60px;
+    top: 100px;
+}
+
+.developerName-3 {
+    left: 37%;
+    top: 34%;
+}
+
+.developerName-4 {
+    right: 60px;
+    bottom: 50px;
+}
+
+.developerName-5 {
+    left: 60px;
+    bottom: 50px;
+}
+
+/* About Section Style End*/
+
+/* fixed toggle */
+#fixedToggle div {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #e8e7e7;
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    z-index: 111111;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer {
+    position: relative;
+}
+
+
+
+
+/* Media queries for responsiveness */
+@media (max-width:6000px) {
+    #benefits {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        width: 100%;
+        padding: 20px 30px;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .navbar {
+        width: 100%;
+    }
+
+    .hero {
+        height: auto;
+    }
+
+    .cardsDiv {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+        position: relative;
+        perspective: 1000px;
+        box-sizing: border-box;
+        height: auto;
+    }
+
+    #aboutSection h1 {
+        font-size: 3em;
+    }
+
+    .developer {
+        width: 45%;
+        height: 300px;
+    }
+
+    .developer .card-front h3 {
+        font-size: 1.5rem;
+    }
+
+    .developerName-1,
+    .developerName-2,
+    .developerName-3,
+    .developerName-4,
+    .developerName-5 {
+        position: static;
+        margin: 20px 0;
+    }
+
+
+    #circle {
+        left: 0;
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        height: auto;
+        border-radius: 0px;
+        background-color: rgb(205, 225, 232);
+
+    }
+
+    #circle .aim {
+        margin-left: -450px;
+        font-size: 5em;
+    }
+
+    #circle .quality {
+        margin-right: -290px;
+        width: 100%;
+        font-size: 5em;
+    }
+
+    .line {
+        width: 80%;
+
+    }
+
+    #circle::after {
+        height: 440px;
+        width: 47%;
+        top: 0px;
+        left: 30%;
+        transform: translateX(-50%);
+        animation: shake 2s infinite ease-in-out;
+
+    }
+
+    #circle::before {
+        height: 270px;
+        width: 30%;
+        top: 200px;
+        left: 60%;
+        transform: translateX(-50%);
+        animation: shake 2s infinite ease-in-out;
+
+    }
+
+    #circle .theory {
+        margin-left: 80px;
+        font-size: 1.4em;
+
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+        height: auto;
+    }
+
+    .hero-text p {
+        font-size: 8rem;
+        word-spacing: -10px;
+        letter-spacing: 1px;
+    }
+
+    .hide {
+        display: none;
+
+    }
+
+    #preview {
+        flex-wrap: wrap;
+    }
+
+    .cardsDiv {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+        position: relative;
+        perspective: 1000px;
+        box-sizing: border-box;
+        height: auto;
+    }
+
+    #aboutSection h1 {
+        font-size: 3em;
+    }
+
+    .developer {
+        width: 45%;
+        height: 300px;
+    }
+
+    .developer .card-front h3 {
+        font-size: 1.5rem;
+    }
+
+    .developerName-1,
+    .developerName-2,
+    .developerName-3,
+    .developerName-4,
+    .developerName-5 {
+        position: static;
+        margin: 20px 0;
+    }
+
+    #circle .aim {
+        font-size: 2.8em;
+        letter-spacing: -2px;
+        word-spacing: -10px;
+        margin-left: -400px;
+        text-align: center;
+    }
+
+    #circle .theory {
+        width: 80%;
+    }
+
+    #circle .quality {
+        font-size: 2.8em;
+        letter-spacing: -2px;
+        word-spacing: -10px;
+        box-sizing: border-box;
+        font-family: 'Roboto Mono', monospace;
+        color: black;
+        z-index: 1111;
+        width: 100%;
+        margin-right: -320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: .8em;
+        font-weight: 300;
+    }
+
+    .hero p {
+        word-spacing: -40px;
+        letter-spacing: -10px;
+    }
+
+    #circle {
+        left: 0;
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        height: auto;
+        border-radius: 0px;
+        background-color: rgb(205, 225, 232);
+    }
+
+    #circle .aim {
+        font-size: 2.8em;
+        letter-spacing: -2px;
+        word-spacing: -10px;
+        margin-left: -270px;
+        text-align: center;
+    }
+
+    #circle .quality {
+        font-size: 2.8em;
+        letter-spacing: -2px;
+        word-spacing: -10px;
+        box-sizing: border-box;
+        font-family: 'Roboto Mono', monospace;
+        color: black;
+        z-index: 1111;
+        width: 100%;
+        margin-right: -190px;
+    }
+
+    .line {
+        width: 70%;
+    }
+
+    #circle .theory {
+        font-size: 1.5rem;
+        text-indent: 0;
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    .card-container {
+        flex-direction: column;
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .card {
+        position: relative;
+        width: 90%;
+        height: 300px;
+        margin: 20px 0;
+        transform: none;
+        z-index: 1;
+    }
+
+    .card-gif {
+        height: 100%;
+    }
+
+    .card:hover .card-gif {
+        filter: none;
+    }
+
+    #circle::after {
+        height: 340px;
+        width: 47%;
+        top: 0px;
+        left: 30%;
+        transform: translateX(-50%);
+        animation: shake 2s infinite ease-in-out;
+    }
+
+    #circle::before {
+        height: 200px;
+        width: 30%;
+        top: 160px;
+        left: 60%;
+        transform: translateX(-50%);
+        animation: shake 2s infinite ease-in-out;
+
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        height: 70vh;
+    }
+
+    #preview {
+        flex-wrap: wrap;
+    }
+
+    #aboutSection h1 {
+        font-size: 2.5em;
+    }
+
+    .developer {
+        width: 100%;
+        height: 250px;
+    }
+
+    .developer .card-front h3 {
+        font-size: 1.2rem;
+    }
+
+    .cardsDiv {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 540px) {
+    #aboutSection h1 {
+        font-size: 2em;
+
+    }
+
+    #circle {
+        padding-top: 20px;
+        width: 100%;
+    }
+
+
+    #circle .aim {
+        font-size: 1.5em;
+        margin-left: -280px;
+    }
+
+    #circle .quality {
+        font-size: 1.5em;
+        margin-right: -50px;
+    }
+
+
+    #circle .theory {
+        font-size: 0.8rem;
+        width: 70%;
+    }
+
+    .card {
+        width: 80%;
+        height: 250px;
+    }
+
+    .card-container {
+        margin-top: 20px;
+    }
+
+    #circle::before {
+        height: 150px;
+        width: 30%;
+    }
+
+    #circle::after {
+        height: 250px;
+        width: 50%;
+    }
+}
+
+@media (max-width: 420px) {
+    #aboutSection h1 {
+        font-size: 2em;
+
+    }
+
+    #circle {
+        padding-top: 20px;
+        width: 100%;
+    }
+
+
+    #circle .aim {
+        font-size: 1.5em;
+        margin-left: -200px;
+    }
+
+    #circle .quality {
+        font-size: 1.5em;
+        margin-right: 120px;
+    }
+
+
+    #circle .theory {
+        font-size: 0.8rem;
+        width: 70%;
+    }
+
+    .card {
+        width: 80%;
+        height: 250px;
+    }
+
+    .card-container {
+        margin-top: 20px;
+    }
+
+    #circle::before {
+        height: 150px;
+        width: 30%;
+    }
+
+    #circle::after {
+        height: 250px;
+        width: 50%;
+    }
+}

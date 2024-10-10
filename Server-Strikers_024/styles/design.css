@@ -1,0 +1,659 @@
+body {
+    font-family: Arial, sans-serif;
+   
+    
+    
+    height: 100vh;
+    margin: 0;
+   
+   
+ 
+    transition: background-image 0.5s ease-in-out;
+  }
+  .maincontainer{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+   max-width: 1500px;
+   
+  }
+
+
+
+    .container {
+        position: relative;
+        z-index: 1;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        
+        justify-content: center;
+       
+    }
+
+  .container {
+    display: flex;
+    gap: 20px;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .focus-session{
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    width: 400px;
+    height: 540px;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+  }
+  .daily-progress {
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    width: 400px;
+    height: 231px;
+    
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .break-setting {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .time-setting {
+    /* width: 60px;
+                padding: 5px;
+                margin-left: 10px; */
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .num-border {
+    width: auto;
+
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .custom-number-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+  }
+
+  input[type="number"] {
+    width: 80px;
+    height: 70px;
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    outline: none;
+    margin-right: 5px;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .arrow-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .arrow-up,
+  .arrow-down {
+    background: #0078d4;
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 2px 0;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arrow-up:hover,
+  .arrow-down:hover {
+    background: #005a9e;
+  }
+
+  #start-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  #start-button:hover {
+    background-color: #e64a19;
+  }
+
+  .timer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+   
+    padding: 10px;
+    border-radius: 5px;
+    
+  }
+
+  .flip-clock-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #cccccc;
+  }
+
+  .flip-clock__piece {
+   background-color: whitesmoke;
+   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    width: 40px;
+
+    height: 40px;
+    
+  }
+
+  #timer-status {
+    font-size: 16px;
+    color: #eee7e7;
+  }
+  .light-theme #timer-status p{
+    background-color: red;
+
+  }
+
+  .daily-progress .progress-circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  .daily-progress h2{
+    margin-left: 35px;
+  }
+
+  .daily-progress .progress-circle svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+  }
+
+  .daily-progress .progress-circle circle {
+    fill: none;
+    stroke-width: 10;
+  }
+
+  .daily-progress .progress-circle circle:nth-child(1) {
+    stroke: #444;
+  }
+
+  .daily-progress .progress-circle circle:nth-child(2) {
+    stroke: #76ff03;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 0.5s ease;
+  }
+
+  .progress-text {
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .edit-icon {
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal-content {
+    background-color: #2c2c2c;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 10px;
+    height: auto;
+  }
+
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .modal-buttons button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+  }
+
+  #save-button {
+    background-color: #4caf50;
+  }
+
+  #save-button:hover {
+    background-color: #45a049;
+  }
+
+  #cancel-button {
+    background-color: #f44336;
+  }
+
+  #cancel-button:hover {
+    background-color: #e53935;
+  }
+
+  #theme-toggle {
+    /* position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    background-color: #444;
+                    color: white;
+                    padding: 10px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background-color 0.3s, color 0.3s;
+                    font-size: 16px; Adjusted for better visibility */
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ff5722;
+    color: white;
+    font-size: 16px;
+  }
+
+  #theme-toggle:hover {
+    background-color: #e64a19;
+  }
+  #time-input{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  }
+
+  .light-theme body {
+    background-color: #ffe9d0;
+
+    color: #000;
+    background-image: url("https://images.unsplash.com/photo-1508962914676-134849a727f0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+  }
+
+  .light-theme .container {
+    background-color: #bbe9ff;
+   
+  }
+
+  .light-theme .flip-clock-wrapper {
+    background-color: #b1afff;
+  }
+
+  .light-theme .timer {
+    background-color: #bbe9ff;
+  }
+
+  .light-theme .focus-session,
+  .light-theme .daily-progress {
+    background-color: #b1afff;
+    color: #000;
+  }
+
+  .light-theme #start-button {
+    background-color: #e64a19;
+  }
+
+  .light-theme .modal-content {
+    background-color: #bbe9ff;
+    color: black;
+  }
+
+  .light-theme #start-button:hover {
+    background-color: #fd3c01;
+  }
+
+  .light-theme .flip-clock__piece {
+    background-color: #d1c4e9;
+    color: #000;
+  }
+
+  
+
+  .light-theme .progress-circle circle:nth-child(1) {
+    stroke: #ff0808;
+  }
+
+  .light-theme .progress-circle circle:nth-child(2) {
+    stroke: #4caf50;
+  }
+
+  .light-theme .timer{
+    background-color: #b1afff;
+  }
+  .light-theme #pause-button{
+    background-color: #b1afff;
+  }
+  .light-theme #resume-button{
+    background-color: #b1afff;
+  }
+
+
+  #progress-data {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 45px;
+    gap: 10px;
+   
+  }
+
+  svg {
+    width: 150px;
+    margin-left: 10px;
+    
+  }
+
+  #goal-input {
+    margin-top: 20px;
+    font-size: 20px bold;
+    width: 80%;
+    height: 30px;
+  }
+
+  .timer {
+    position: absolute;
+    text-align: center;
+    font-size: 24px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: fit-content;
+    margin-bottom: 100px;
+    height: 450px;
+    display: none;
+  }
+
+  .timer-border {
+    width: 80%;
+
+   
+    transform: rotate(-90deg);
+  }
+
+  .timer-border-bg {
+    fill: none;
+    stroke: #333;
+    stroke-width: 15;
+
+
+  }
+
+  .timer-border-progress {
+    fill: none;
+    stroke: #3498db;
+    stroke-width: 15;
+    stroke-linecap: round;
+    stroke-dasharray: 565; /* Circumference of the circle */
+    stroke-dashoffset: 565; /* Initially hidden */
+    transition: stroke-dashoffset 1s linear;
+  }
+
+  svg {
+    position: relative;
+  
+  }
+
+  .flip-clock-wrapper {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    color: #000;
+   
+  }
+
+  #timer-status {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    color: black;
+
+  }
+
+
+  .timer-controls {
+display: flex;
+justify-content: space-around;
+align-items: center;
+margin-top: 20px;
+/* background-color: yellow; */
+width: 100%;
+position: absolute;
+bottom: 10px;
+}
+
+.control-button {
+
+border: none;
+background-color: white;
+font-size: 24px;
+padding: 12px;
+border-radius: 50%;
+cursor: pointer;
+transition: background-color 0.3s ease, transform 0.3s ease;
+
+}
+
+
+
+
+.control-button:hover {
+
+transform: scale(1.1);
+}
+
+.back-container {
+display: flex;
+align-items: center;
+position: relative;
+}
+
+#back-button {
+background-color: rgb(0, 0, 0);
+padding: 10px;
+border: none;
+color: white;
+border-radius: 10px;
+width: 100px;
+
+}
+
+#back-button:hover {
+background-color:red;
+}
+
+.tooltip {
+visibility: hidden;
+background-color: black;
+
+color: #fff;
+text-align: center;
+border-radius: 5px;
+padding: 5px;
+position: absolute;
+z-index: 1;
+
+
+bottom: 125%;
+
+left: -50px;
+opacity: 0;
+font-size: smaller;
+transition: opacity 0.3s;
+width: 200px;
+}
+
+.back-container:hover .tooltip {
+visibility: visible;
+opacity: 1;
+}
+
+
+
+
+
+
+
+
+ 
+
+  /* goal music */
+  .goal-music{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+  }
+
+
+
+
+
+
+
+
+    /* Responsive Adjustments */
+    @media (max-width: 1024px) {
+      .container {
+        flex-direction: row;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .focus-session,
+      .daily-progress {
+        max-width: 100%;
+      }
+
+      input[type="number"] {
+        width: 60px;
+        height: 50px;
+      }
+
+      .arrow-up,
+      .arrow-down {
+        font-size: 1rem;
+        padding: 5px;
+      }
+
+      .flip-clock-wrapper {
+        font-size: 2rem;
+      }
+
+      .flip-clock__piece {
+        min-width: 50px;
+        padding: 8px 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .focus-session,
+      .daily-progress,
+      .goal-music {
+        max-width: 100%;
+      }
+
+      input[type="number"] {
+        width: 50px;
+        height: 40px;
+        font-size: 1rem;
+      }
+
+      .arrow-up,
+      .arrow-down {
+        font-size: 0.9rem;
+        padding: 4px;
+      }
+
+      .flip-clock-wrapper {
+        font-size: 1.8rem;
+      }
+
+      .flip-clock__piece {
+        min-width: 40px;
+        padding: 6px 12px;
+      }
+
+      #theme-toggle {
+        font-size: 0.9rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      .timer {
+        font-size: 1.2rem;
+      }
+    }

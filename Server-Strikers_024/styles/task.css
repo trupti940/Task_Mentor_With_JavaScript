@@ -1,0 +1,293 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+}
+
+nav {
+  border: 1px solid black;
+  max-width: 1536px;
+  margin: auto;
+}
+nav > div {
+  border: 1px solid black;
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+nav > div > div:first-child {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+nav > div > div:last-child {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+}
+nav > div > div:last-child > p {
+  margin-right: 20px;
+  margin-left: -20px;
+  cursor: pointer;
+}
+nav > div > div:last-child > span {
+  cursor: pointer;
+  margin-right: 20px;
+}
+#container228 {
+  border: 1px solid black;
+  max-width: 1536px;
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+#sideBar228 {
+  border: 1px solid black;
+  min-width: 280px;
+  width: 18%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+#sideBar228 > div:first-child {
+  /* border: 1px solid black; */
+  width: 95%;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+#sideBar228 > div:first-child::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+/* -----sidebar card--- */
+#sideBar228 > div:first-child > div {
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+#sideBar228 > div:first-child > div > div:first-child {
+  /* border: 1px solid black; */
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#sideBar228 > div:first-child > div > div:first-child > span {
+  margin-left: 5px;
+  margin-right: 10px;
+}
+#sideBar228 > div:first-child > div > div:last-child {
+  /* border: 1px solid black; */
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+#sideBar228 > div:first-child > div > div:last-child > p:first-child {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+#sideBar228 > div:last-child {
+  border: 1px solid black;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+#midBar228 {
+  /* border: 1px solid black; */
+  min-width: 600px;
+  width: 100%;
+  margin-left: 1%;
+  margin-right: 1%;
+  overflow: auto;
+}
+#midBar228::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+#endBar228 {
+  /* border: 1px solid black; */
+  min-width: 250px;
+  width: 23%;
+  height: 100%;
+  margin-right: 1%;
+  overflow: auto;
+  padding-bottom: 70px;
+  display: none;
+}
+#endBar228::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+#endBar228 > div {
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  margin-top: 3%;
+  border-radius: 10px;
+}
+/* ----endbar addnote */
+#addnote {
+  border: none; /* Removes the border */
+  outline: none; /* Removes the focus outline */
+  resize: none; /* Prevents resizing of the textarea */
+  overflow: hidden; /* Hides scrollbars */
+  overflow-y: scroll; /* Allows vertical scrolling without showing scrollbars */
+  scrollbar-width: none; /* For Firefox: Hides scrollbars */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge: Hides scrollbars */
+}
+#addnote::-webkit-scrollbar {
+  display: none; /* Hides scrollbars in Chrome, Safari, and newer Edge */
+}
+
+/* -----------------------login signup page------------- */
+/* Fullscreen transparent overlay */
+#loginBox {
+  display: none;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* Make the overlay unclickable */
+}
+
+/* Centered box */
+.center-box {
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Ensure it's on top of everything */
+  pointer-events: auto; /* Make the box clickable */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.center-box2 > div:nth-child(1) {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: flex-end;
+}
+.center-box2 > div:nth-child(1) > span {
+  /* border: 1px solid black; */
+  cursor: pointer;
+}
+.center-box2 > div:nth-child(2) {
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.center-box2 > div:nth-child(3) {
+  border: 1px solid black;
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+.center-box2 > div:nth-child(3) > input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+}
+.center-box2 > div:nth-child(4) {
+  border: 1px solid black;
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.center-box2 > div:nth-child(4) > input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+}
+.center-box2 > div:nth-child(5) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.center-box2 > div:nth-child(5) > button {
+  padding: 5px 10px;
+  width: 100%;
+}
+.center-box2 > p {
+  text-align: center;
+}
+.center-box > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -----------------------login signup page------------- */
+/* ----------------pomodoro timer page----------------- */
+
+#timerBox228 {
+  border: 1px solid black;
+  position: fixed; /* Position the div relative to the viewport */
+  left: 50%; /* Align the left edge of the div to the center of the screen */
+  bottom: 0; /* Position the div at the bottom of the screen */
+  transform: translateX(
+    -50%
+  ); /* Move the div back by 50% of its own width to center it */
+  /* Optional styling */
+  background-color: #f2f2f2;
+  width: 120px;
+  height: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#timerBox228 > div{
+  border: 1px solid black;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+#timerBox228 > span{
+  font-size: 30px;
+}
+/* ----------------pomodoro timer page----------------- */
